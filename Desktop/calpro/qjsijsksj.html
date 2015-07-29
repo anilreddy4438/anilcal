@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/tdemes/smootdness/jquery-ui.css">-->
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <style>
+    table.calender_table, tr.calender_tr, td.calender_td{
+        height: 60px;
+        width: 2000px;
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+</style>
+</head>
+<body>
+<script>
+//    var wordMonth = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+    var today = new Date();
+    var todaysDay = today.getDay() + 1;
+    var todaysDate = today.getDate();
+    var monthNum = today.getMonth() + 1;
+    var yearNum = today.getFullYear();
+    var firstDay = new Date(String(monthNum)+"/1/"+String(yearNum)).getUTCDay();
+    var lastDate = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+//    console.log(lastDay)
+    numbDays = lastDate.getDate();
+
+    $(document).ready(function() {
+        for(var i=1; i<=numbDays;i++){
+            $('tr').append('<td class="calender_td">' +i+'</td>')
+        }
+    });
+</script>
+<table class="calender_table" >
+    <tr class="calender_tr">
+    </tr>
+
+</table>
+</body>
+</html>

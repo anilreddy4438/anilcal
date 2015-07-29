@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+
+
+</head>
+<body>
+<div id="datepicker" data-date="07/24/2015"  ></div>
+<input type="hidden" id="my_hidden_input"  />
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Create an Event</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div>
+                        <label for="message-date" class="control-label">EVENT DATE:</label>
+                        <input type="text" id="message-date" >
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">EVENT:</label>
+                        <textarea class="form-control" id="message-text" rows="4" cols="30"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary " id="datasubmit" data-dismiss="modal">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+<table class="calender_table" >
+    <tr class="calender_tr"></tr>
+    <tr class="calender_tr1"></tr>
+    <tr class="calender_tr2"></tr>
+    <tr class="calender_tr3"></tr>
+    <tr class="calender_tr4"></tr>
+    <tr class="calender_tr5"></tr>
+    <tr class="calender_tr6"></tr>
+
+</table>
+
+
+<link rel="stylesheet" href="css/bootstrap-datepicker.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<!--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/tdemes/smootdness/jquery-ui.css">-->
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-tdeme.min.css">-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="bootstrap-datepicker.js"></script>
+<script src="index.js"></script>
+
+
+<script>
+
+//    var events={}
+//    var presentClickedDiv;
+//    var thought
+//    var x
+//    $("#datasubmit").click(function() {
+//        thought = $("#message-text").val();
+////        console.log(thought);
+//        x= $(presentClickedDiv).find('div').html(thought)
+////        console.log(events[$(presentClickedDiv).html().split('<')[0]] = x.html());
+////        console.log(events[$(presentClickedDiv).contents().get(0).nodeValue ] = x.html());
+//
+//        $('#myModal').modal('hide');
+//
+//    })
+//    $("td").click(function(){
+////        console.log();
+//        presentClickedDiv = this;
+//
+//
+//
+//    });
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

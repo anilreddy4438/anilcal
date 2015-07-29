@@ -1,0 +1,56 @@
+table {
+    border-collapse: collapse;
+    align: center;
+}
+table.table_pos{
+    border: 1px solid black;
+    padding: 80px;
+    align: right;
+}
+.table_position{
+    border: 1px solid black;
+    background-color:yellowgreen;
+    padding: 30px !important;
+
+}
+.table_posi{
+    border: 1px solid black;
+    padding: 30px !important;
+}
+body { font-size: 92.5%; }
+/*label, input { display:block; }*/
+.ui-dialog .ui-state-error { padding: .3em; }
+fieldset { padding:0; border:0; margin-top:-1px; }
+h1 { font-size: 1.2em; margin: .6em 0; }
+/*.calender_style*/
+/*{*/
+    /*background-color: azure ;*/
+    /*align :center ;*/
+    /*width: 40px;;*/
+    /*height:22px;*/
+/*}*/
+/*.cal_style {*/
+    /*align-content: center;*/
+    /*background-color :azure ;*/
+    /*height: 80px;*/
+    /*width:160px;*/
+/*}*/
+/*.month_style*/
+/*{*/
+    /*background-color:azure;*/
+    /*align-content: center;*/
+    /*/!*valign:center;*!/*/
+    /*width: 128px;;*/
+    /*height: 40px;;*/
+/*}*/
+/*.button_style{*/
+    /*background-color:azure;*/
+    /*align-content-: center;*/
+/*}*/
+
+.calender_table,.calender_tr,.calender_td,.calender_tr1,.calender_td1{
+    height: 60px;
+    width: 500px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}

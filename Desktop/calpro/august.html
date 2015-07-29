@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>calendar</title>
+</head>
+<body>
+<div >
+    <br> <br> <br> <br>
+    <table>
+        <tr>
+            <th>MONDAY</th>
+            <th>TUESDAY</th>
+            <th>WEDNESDAY</th>
+            <th>THURSDAY</th>
+            <th>FRIDAY</th>
+            <th>SATURDAY</th>
+            <th>SUNDAY</th>
+
+
+        </tr>
+        <tr>
+            <th></th>
+            <th> </th>
+            <th> </th>
+            <th> </th>
+            <th> </th>
+            <th  data-toggle="modal" data-target="#exampleModal" >01
+            <div></div>
+            </th>
+            <th data-toggle="modal" data-target="#exampleModal">02
+            <div></div></th>
+        </tr>
+        <tr>
+            <th data-toggle="modal" data-target="#exampleModal">03  <div></div></th>
+            <th data-toggle="modal" data-target="#exampleModal">04  <div></div></th>
+            <th data-toggle="modal" data-target="#exampleModal">05  <div></div></th>
+            <th data-toggle="modal" data-target="#exampleModal">06  <div></div></th>
+            <th data-toggle="modal" data-target="#exampleModal">07  <div></div></th>
+            <th data-toggle="modal" data-target="#exampleModal">08  <div></div></th>
+            <th data-toggle="modal" data-target="#exampleModal">09  <div></div></th>
+
+        </tr>
+        <tr>
+            <th data-toggle="modal" data-target="#exampleModal">10  <div></div></th>
+            <th data-toggle="modal" data-target="#exampleModal">11  <div></div></th>
+            <th data-toggle="modal" data-target="#exampleModal">12  <div></div></th>
+            <th data-toggle="modal" data-target="#exampleModal">13  <div></div></th>
+            <th data-toggle="modal" data-target="#exampleModal">14  <div></div></th>
+            <th data-toggle="modal" data-target="#exampleModal">15  <div></div></th>
+            <th data-toggle="modal" data-target="#exampleModal">16  <div></div></th>
+
+        </tr>
+        <tr>
+            <th data-toggle="modal" data-target="#exampleModal">17  <div></div></th>
+            <th data-toggle="modal" data-target="#exampleModal">18  <div></div></th>
+            <th data-toggle="modal" data-target="#exampleModal">19  <div></div></th>
+            <th data-toggle="modal" data-target="#exampleModal">20  <div></div></th>
+            <th data-toggle="modal" data-target="#exampleModal">21  <div></div></th>
+            <th data-toggle="modal" data-target="#exampleModal">22  <div></div></th>
+            <th data-toggle="modal" data-target="#exampleModal">23  <div></div></th>
+
+        </tr>
+        <tr>
+            <th data-toggle="modal" data-target="#exampleModal">24  <div></div></th>
+            <th data-toggle="modal" data-target="#exampleModal">25  <div></div></th>
+            <th data-toggle="modal" data-target="#exampleModal">26  <div></div></th>
+            <th data-toggle="modal" data-target="#exampleModal">27 <div></div> </th>
+            <th data-toggle="modal" data-target="#exampleModal">28  <div></div></th>
+            <th data-toggle="modal" data-target="#exampleModal">29  <div></div></th>
+            <th data-toggle="modal" data-target="#exampleModal">30  <div></div></th>
+
+        </tr>
+        <tr>
+            <th data-toggle="modal" data-target="#exampleModal">31  <div></div></th>
+            <th> </th>
+            <th> </th>
+            <th> </th>
+            <th> </th>
+            <th> </th>
+            <th> </th>
+
+        </tr>
+    </table>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Create an Event</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">EVENT:</label>
+                        <textarea class="form-control" id="message-text" rows="4" cols="30"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary " id="datasubmit" data-dismiss="modal">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="css/style.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<!--<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script>
+    var events={}
+    var presentClickedDiv;
+    var thought
+    var x
+    $("#datasubmit").click(function() {
+         thought = $("#message-text").val();
+//        console.log(thought);
+      x= $(presentClickedDiv).find('div').html(thought)
+//        console.log(events[$(presentClickedDiv).html().split('<')[0]] = x.html());
+        console.log(events[$(presentClickedDiv).contents().get(0).nodeValue ] = x.html());
+
+        $('#myModal').modal('hide');
+
+    })
+    $("th").click(function(){
+//        console.log();
+        presentClickedDiv = this;
+
+    });
+</script>
+</body>
+</html>
